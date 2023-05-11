@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.SC04ConstructorInjection.Certi" name="CertiBean1">
+		<constructor-arg value="Adv Java Spring" />
+	</bean>
+
+	<bean class="com.SC04ConstructorInjection.Certi" name="CertiBean2" c:name="Hibernate" />
+	
+	<bean class="com.SC04ConstructorInjection.Certi" name="CertiBean3">
+		<constructor-arg>
+			<value>Servlet</value>
+		</constructor-arg>
+	</bean>
+			
+	<bean class="com.SC04ConstructorInjection.Person" name="PersonBean1">
+		<constructor-arg>
+			<value>100</value>
+		</constructor-arg>
+
+		<constructor-arg>
+			<value>Anant</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<ref bean="CertiBean1" />
+		</constructor-arg>
+		
+		<constructor-arg>
+			<list>
+				<value>111</value>
+				<value>222</value>
+				<value>333</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="com.SC04ConstructorInjection.Person" name="PersonBean2">
+		<constructor-arg value="101" />
+		<constructor-arg value="Pawan" />
+		<constructor-arg ref="CertiBean2" />
+		<constructor-arg>
+			<list>
+				<value>444</value>
+				<value>555</value>
+				<value>666</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="com.SC04ConstructorInjection.Person" name="PersonBean3" 
+		c:id="102" c:name="Shailoo" c:certi-ref="CertiBean3">
+		<constructor-arg>
+			<list>
+				<value>777</value>
+				<value>888</value>
+				<value>999</value>
+			</list>
+		</constructor-arg>
+	
+	</bean>
+	
+	<bean class="com.SC04ConstructorInjection.Addition" name="AdditionBean1">
+		<constructor-arg value="12" type="int" />
+		<constructor-arg value="6" type="int" />
+	</bean>
+	
+	<bean class="com.SC04ConstructorInjection.Addition" name="AdditionBean2">
+		<constructor-arg value="10" />
+		<constructor-arg value="6" />
+	</bean>
+	
+	<bean class="com.SC04ConstructorInjection.Addition" name="AdditionBean3">
+		<constructor-arg value="20" type="double" index="1"/>
+		<constructor-arg value="60" type="double" index="0"/>
+	</bean>
+
+</beans>

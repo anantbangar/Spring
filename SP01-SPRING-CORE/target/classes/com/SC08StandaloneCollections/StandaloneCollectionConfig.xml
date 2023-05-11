@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<!-- Standalone List -->
+	<!-- for that create util schema like p schema in namespace and create schemaLocation 
+		for util -->
+
+	<util:list list-class="java.util.Vector"
+		id="friendsListOfPerson">
+		<value>anant</value>
+		<value>shailoo</value>
+		<value>ram</value>
+		<value>gulab</value>
+	</util:list>
+
+	<!-- Standalone Map -->
+
+	<util:map map-class="java.util.HashMap"
+		id="courseFeesMapOfPerson">
+		<entry key="JAVA" value="8000" />
+		<entry key="SPRING" value="5000" />
+		<entry key="HIBERNATE" value="3000" />
+	</util:map>
+
+	<!-- Standalone Properties -->
+
+	<util:properties id="dbConfigPropertiesOfPerson">
+		<prop key="driver">oracle.jdbc.driver.Oracle</prop>
+		<prop key="url">jdbc:oracle:thin:localhost:1521:orcl</prop>
+		<prop key="username">system</prop>
+		<prop key="password">system123</prop>
+	</util:properties>
+
+
+	<bean class="com.SC08StandaloneCollections.Person"
+		name="PersonBean1">
+
+		<property name="friendsList">
+			<ref bean="friendsListOfPerson" />
+		</property>
+
+		<property name="courseFeesMap" ref="courseFeesMapOfPerson" />
+		
+		<property name="properties" ref="dbConfigPropertiesOfPerson"></property>
+	</bean>
+
+
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<context:component-scan
+		base-package="com.SC10SpringBeanScope" />
+
+	<util:list list-class="java.util.ArrayList" id="AddressList">
+		<value>Mumbai</value>
+		<value>Thane</value>
+		<value>Navi-Mumbai</value>
+	</util:list>
+	
+	<!-- <bean class="com.SC10SpringBeanScope.Student" name="StudentBean" scope="prototype">
+		<property name=""/>
+	</bean> -->
+
+	<!-- <bean class="com.SC09StereotypeAnnotations.Student" name="StudentBean1"> 
+		<property name="id" value="100" /> <property name="name" value="Anant" /> 
+		</bean> -->
+
+</beans>
