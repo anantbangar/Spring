@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component("StudentBean")
 @Scope("prototype")
+//@Scope("singleton") // ByDefault
 public class Student {
 	
 	@Value("101")

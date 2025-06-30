@@ -13,15 +13,15 @@
 		<property name="city" value="Thane" />
 	</bean>
 
-	<bean class="com.SC06AutoWiring.xml.Address" name="address">
+	<!-- <bean class="com.SC06AutoWiring.xml.Address" name="address">
 		<property name="street" value="Right Street" />
 		<property name="city" value="Mumbai" />
-	</bean>
+	</bean> -->
 	
 	<!-- <bean class="com.SC06AutoWiring.xml.Emp" name="EmpBean1" autowire="byType" /> -->
 	
-	<bean class="com.SC06AutoWiring.xml.Emp" name="EmpBean1" autowire="byName" />
+	<!-- <bean class="com.SC06AutoWiring.xml.Emp" name="EmpBean1" autowire="byName" /> -->
 	
-	<!-- <bean class="com.SC06AutoWiring.xml.Emp" name="EmpBean1" autowire="constructor" /> -->
+	<bean class="com.SC06AutoWiring.xml.Emp" name="EmpBean1" autowire="constructor" />
 
 </beans>

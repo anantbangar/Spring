@@ -60,7 +60,7 @@ public class EmpDaoImpl implements EmpDao{
 		return jdbcTemplate;
 	}
 
-	@Autowired
+	//@Autowired
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
