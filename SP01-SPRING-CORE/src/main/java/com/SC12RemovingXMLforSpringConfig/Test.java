@@ -20,6 +20,10 @@ public class Test {
 		System.out.println(st);
 		st.study();
 		
+		Student st1 = context.getBean("st",Student.class);
+		System.out.println(st1);
+		st1.study();
+		
 		Samosa sm = context.getBean("getSamosa",Samosa.class);
 		System.out.println(sm);
 		sm.display();

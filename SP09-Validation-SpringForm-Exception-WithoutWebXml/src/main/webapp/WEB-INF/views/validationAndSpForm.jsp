@@ -14,7 +14,8 @@
 </head>
 <body>
 	<form:form action="validationAndSpFormSubmit" modelAttribute="emp">
-		UserName : <form:input path="name"/><br>
+		UserName : <form:input path="name"/>
+		<form:errors path="name" cssClass="error"/><br>
 		Password : <form:password path="password"/>
 		<form:errors path="password" cssClass="error"/><br>
 		Age : <form:input path="age"/>

@@ -11,6 +11,8 @@ public class Employee
 	@Max(value = 45,message = "must be equal or less than 45")
 	private int age;
 	
+	@Size(min = 2, max = 30, message = "name must be between 2 and 30 characters")
+    @Pattern(regexp = "^[a-zA-Z ]+$", message = "name must contain only letters and spaces")
 	private String name;
 	
 	//@Size(min=1,message="required")

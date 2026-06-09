@@ -26,8 +26,8 @@ public class HomeController {
 		List<String> listFriends=new ArrayList<String>();
 		listFriends.add("Ram");
 		listFriends.add("Raju");
-		listFriends.add("Ketaki");
-		listFriends.add("Sadhana");
+		listFriends.add("Renu");
+		listFriends.add("Kishori");
 		listFriends.add("Pawan");
 		listFriends.add("Anant");
 		
@@ -47,8 +47,8 @@ public class HomeController {
 		List<String> listFriends=new ArrayList<String>();
 		listFriends.add("Ram");
 		listFriends.add("Raju");
-		listFriends.add("Ketaki");
-		listFriends.add("Sadhana");
+		listFriends.add("Renu");
+		listFriends.add("Kishori");
 		listFriends.add("Pawan");
 		listFriends.add("Anant");
 		

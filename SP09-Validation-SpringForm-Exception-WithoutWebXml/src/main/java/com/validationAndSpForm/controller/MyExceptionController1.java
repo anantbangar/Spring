@@ -11,11 +11,11 @@ public class MyExceptionController1
 	@RequestMapping("/showException")
 	public String showException(Model m)
 	{
-		//String str=null;
-		//System.out.println(str.length());
+		String str=null;
+		System.out.println(str.length());
 		
-		String name="anant";
-		System.out.println(Integer.parseInt(name));
+		//String name="anant";
+		//System.out.println(Integer.parseInt(name));
 		
 		m.addAttribute("exceptionMsg","There is NO Exception");
 		return "show";
